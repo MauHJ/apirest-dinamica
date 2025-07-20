@@ -27,3 +27,40 @@ Stack trace:
 #0 {main}
   thrown in C:\laragon\www\apirest-dinamica\index.php on line 15
 [19-Jul-2025 20:46:56 America/Mexico_City] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\laragon\www\apirest-dinamica\routes\routes.php on line 5
+[20-Jul-2025 09:31:38 America/Mexico_City] PHP Parse error:  syntax error, unexpected ';', expecting ')' in C:\laragon\www\apirest-dinamica\routes\routes.php on line 31
+[20-Jul-2025 10:00:59 America/Mexico_City] PHP Notice:  Undefined variable: routerArray in C:\laragon\www\apirest-dinamica\routes\services\get.php on line 2
+[20-Jul-2025 10:00:59 America/Mexico_City] PHP Notice:  Trying to access array offset on value of type null in C:\laragon\www\apirest-dinamica\routes\services\get.php on line 2
+[20-Jul-2025 10:03:37 America/Mexico_City] PHP Warning:  include(routes/route.php): failed to open stream: No such file or directory in C:\laragon\www\apirest-dinamica\controllers\routes.controller.php on line 9
+[20-Jul-2025 10:03:37 America/Mexico_City] PHP Warning:  include(): Failed opening 'routes/route.php' for inclusion (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\apirest-dinamica\controllers\routes.controller.php on line 9
+[20-Jul-2025 10:38:06 America/Mexico_City] PHP Fatal error:  Uncaught Error: Class 'GetController' not found in C:\laragon\www\apirest-dinamica\routes\services\get.php:4
+Stack trace:
+#0 C:\laragon\www\apirest-dinamica\routes\routes.php(30): include()
+#1 C:\laragon\www\apirest-dinamica\controllers\routes.controller.php(9): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\apirest-dinamica\index.php(20): RoutesController->index()
+#3 {main}
+  thrown in C:\laragon\www\apirest-dinamica\routes\services\get.php on line 4
+[20-Jul-2025 10:39:00 America/Mexico_City] PHP Fatal error:  Uncaught Error: Class 'GetController' not found in C:\laragon\www\apirest-dinamica\routes\services\get.php:4
+Stack trace:
+#0 C:\laragon\www\apirest-dinamica\routes\routes.php(30): include()
+#1 C:\laragon\www\apirest-dinamica\controllers\routes.controller.php(9): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\apirest-dinamica\index.php(20): RoutesController->index()
+#3 {main}
+  thrown in C:\laragon\www\apirest-dinamica\routes\services\get.php on line 4
+[20-Jul-2025 10:49:32 America/Mexico_City] PHP Notice:  Undefined variable: table in C:\laragon\www\apirest-dinamica\routes\services\get.php on line 5
+[20-Jul-2025 11:15:46 America/Mexico_City] PHP Notice:  Undefined variable: respose in C:\laragon\www\apirest-dinamica\routes\services\get.php on line 6
+[20-Jul-2025 11:15:46 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function getData() on null in C:\laragon\www\apirest-dinamica\routes\services\get.php:6
+Stack trace:
+#0 C:\laragon\www\apirest-dinamica\routes\routes.php(30): include()
+#1 C:\laragon\www\apirest-dinamica\controllers\routes.controller.php(9): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\apirest-dinamica\index.php(20): RoutesController->index()
+#3 {main}
+  thrown in C:\laragon\www\apirest-dinamica\routes\services\get.php on line 6
+[20-Jul-2025 11:54:25 America/Mexico_City] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function GetModel::getData(), 1 passed in C:\laragon\www\apirest-dinamica\controllers\get.controller.php on line 7 and exactly 2 expected in C:\laragon\www\apirest-dinamica\models\get.model.php:7
+Stack trace:
+#0 C:\laragon\www\apirest-dinamica\controllers\get.controller.php(7): GetModel::getData('instructors')
+#1 C:\laragon\www\apirest-dinamica\routes\services\get.php(6): GetController::getData('instructors')
+#2 C:\laragon\www\apirest-dinamica\routes\routes.php(30): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\apirest-dinamica\controllers\routes.controller.php(9): include('C:\\laragon\\www\\...')
+#4 C:\laragon\www\apirest-dinamica\index.php(20): RoutesController->index()
+#5 {main}
+  thrown in C:\laragon\www\apirest-dinamica\models\get.model.php on line 7
