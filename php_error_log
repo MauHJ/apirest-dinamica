@@ -1,0 +1,29 @@
+[19-Jul-2025 20:27:04 America/Mexico_City] PHP Warning:  require_once(controller/routes.controller.php): failed to open stream: No such file or directory in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:27:04 America/Mexico_City] PHP Fatal error:  require_once(): Failed opening required 'controller/routes.controller.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:27:25 America/Mexico_City] PHP Warning:  require_once(controller/routes.controller.php): failed to open stream: No such file or directory in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:27:25 America/Mexico_City] PHP Fatal error:  require_once(): Failed opening required 'controller/routes.controller.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:27:42 America/Mexico_City] PHP Warning:  require_once(controller/routes.controller.php): failed to open stream: No such file or directory in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:27:42 America/Mexico_City] PHP Fatal error:  require_once(): Failed opening required 'controller/routes.controller.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:27:43 America/Mexico_City] PHP Warning:  require_once(controller/routes.controller.php): failed to open stream: No such file or directory in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:27:43 America/Mexico_City] PHP Fatal error:  require_once(): Failed opening required 'controller/routes.controller.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:27:44 America/Mexico_City] PHP Warning:  require_once(controller/routes.controller.php): failed to open stream: No such file or directory in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:27:44 America/Mexico_City] PHP Fatal error:  require_once(): Failed opening required 'controller/routes.controller.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:27:45 America/Mexico_City] PHP Warning:  require_once(controller/routes.controller.php): failed to open stream: No such file or directory in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:27:45 America/Mexico_City] PHP Fatal error:  require_once(): Failed opening required 'controller/routes.controller.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:27:45 America/Mexico_City] PHP Warning:  require_once(controller/routes.controller.php): failed to open stream: No such file or directory in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:27:45 America/Mexico_City] PHP Fatal error:  require_once(): Failed opening required 'controller/routes.controller.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:27:58 America/Mexico_City] PHP Warning:  require_once(controller/routes.controller.php): failed to open stream: No such file or directory in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:27:58 America/Mexico_City] PHP Fatal error:  require_once(): Failed opening required 'controller/routes.controller.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:27:59 America/Mexico_City] PHP Warning:  require_once(controller/routes.controller.php): failed to open stream: No such file or directory in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:27:59 America/Mexico_City] PHP Fatal error:  require_once(): Failed opening required 'controller/routes.controller.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:28:34 America/Mexico_City] PHP Warning:  require_once(controller/routes.controller.php): failed to open stream: No such file or directory in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:28:34 America/Mexico_City] PHP Fatal error:  require_once(): Failed opening required 'controller/routes.controller.php' (include_path='.;C:/laragon/etc/php/pear') in C:\laragon\www\apirest-dinamica\index.php on line 13
+[19-Jul-2025 20:30:53 America/Mexico_City] PHP Fatal error:  Uncaught Error: Class 'RoutesController' not found in C:\laragon\www\apirest-dinamica\index.php:15
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\apirest-dinamica\index.php on line 15
+[19-Jul-2025 20:34:49 America/Mexico_City] PHP Fatal error:  Uncaught Error: Class 'RoutesController' not found in C:\laragon\www\apirest-dinamica\index.php:15
+Stack trace:
+#0 {main}
+  thrown in C:\laragon\www\apirest-dinamica\index.php on line 15
+[19-Jul-2025 20:46:56 America/Mexico_City] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\laragon\www\apirest-dinamica\routes\routes.php on line 5
