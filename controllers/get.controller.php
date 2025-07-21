@@ -2,9 +2,25 @@
 require_once "models/get.model.php";
 class GetController{
 
+    /* ================================================
+       Peticion GET sin filtro
+    ==================================================*/
     static public function getData($table, $select){
 
         $response = GetModel::getData($table, $select);
+        $return = new GetController();
+        $return -> fncResponse($response);
+
+
+    }
+    /* ================================================
+       Peticion GET con filtro
+    ==================================================*/
+    static public function getDataFilter($table, $select, $linkTo, $equalTo){
+
+        $response = GetModel::getDataFilter($table, $select, $linkTo, $equalTo);
+        echo '<pre>'; print_r($response); echo '</pre>';
+        return;
         $return = new GetController();
         $return -> fncResponse($response);
 

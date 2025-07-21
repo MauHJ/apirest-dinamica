@@ -27,11 +27,9 @@ if(count($routesArray) == 1 && isset($_SERVER['REQUEST_METHOD'])){
     /* Periticiones GET */
 
     if($_SERVER['REQUEST_METHOD'] == "GET"){
-        $json = array(
-            'status' => 200,
-            'result' => 'Solicitud GET'
-                    );
-        echo json_encode($json, JSON_PRETTY_PRINT, http_response_code($json["status"]));                       
+
+        include "routes/services/get.php";
+        
     }
     /*Peticion POST */
         if($_SERVER['REQUEST_METHOD'] == "POST"){
