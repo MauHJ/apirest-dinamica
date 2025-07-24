@@ -25,18 +25,26 @@ class GetModel{
     static public function getDataFilter($table, $select, $linkTo, $equalTo){
         
         
-        $linkToArray = explode(",",$linkTo);
-        echo '<pre>'; print_r($linkToArray); echo '</pre>';
-
-        
+        $linkToArray = explode(",",$linkTo);     
         $equalToArray = explode("_",$equalTo);
-        echo '<pre>'; print_r($equalToArray); echo '</pre>';
+        $linkToText = "";
 
-        return;
+            if(count($linkToArray)>1){
+                foreach ($linkToArray as $key => $value){
 
-        $sql = "SELECT $select FROM $table WHERE $linkTo = :$linkTo AND ";
+                    if ($key > 0){
+
+                        $linkToText .= "AND ".$value." = :".$value." ";
+                    }
+                }
+            }
+
+        $sql = "SELECT $select FROM $table WHERE $linkToArray[0] = :$linkToArray[0] $linkToText";
         $stmt = Connection::connect()->prepare($sql);
-        $stmt -> bindParam(":".$linkTo, $equalTo, PDO::PARAM_STR);
+            foreach($linkToArray as $key => $value){
+
+                    $stmt -> bindParam(":".$value, $equalToArray[$key], PDO::PARAM_STR);                
+            }
         $stmt -> execute();
         return $stmt -> fetchAll(PDO::FETCH_CLASS);
 

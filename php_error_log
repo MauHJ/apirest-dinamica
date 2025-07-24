@@ -32,3 +32,52 @@ Stack trace:
 [20-Jul-2025 14:05:44 America/Mexico_City] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\laragon\www\apirest-dinamica\models\get.model.php on line 39
 [20-Jul-2025 14:06:00 America/Mexico_City] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\laragon\www\apirest-dinamica\models\get.model.php on line 39
 [20-Jul-2025 14:06:13 America/Mexico_City] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\laragon\www\apirest-dinamica\models\get.model.php on line 39
+[24-Jul-2025 14:56:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database-1.favicon.ico' doesn't exist in C:\laragon\www\apirest-dinamica\models\get.model.php:16
+Stack trace:
+#0 C:\laragon\www\apirest-dinamica\models\get.model.php(16): PDOStatement->execute()
+#1 C:\laragon\www\apirest-dinamica\controllers\get.controller.php(10): GetModel::getData('favicon.ico', '*')
+#2 C:\laragon\www\apirest-dinamica\routes\services\get.php(23): GetController::getData('favicon.ico', '*')
+#3 C:\laragon\www\apirest-dinamica\routes\routes.php(31): include('C:\\laragon\\www\\...')
+#4 C:\laragon\www\apirest-dinamica\controllers\routes.controller.php(9): include('C:\\laragon\\www\\...')
+#5 C:\laragon\www\apirest-dinamica\index.php(16): RoutesController->index()
+#6 {main}
+  thrown in C:\laragon\www\apirest-dinamica\models\get.model.php on line 16
+[24-Jul-2025 16:29:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\laragon\www\apirest-dinamica\models\get.model.php:44
+Stack trace:
+#0 C:\laragon\www\apirest-dinamica\models\get.model.php(44): PDOStatement->execute()
+#1 C:\laragon\www\apirest-dinamica\controllers\get.controller.php(21): GetModel::getDataFilter('courses', 'id_course,title...', 'title_course,id...', 'Angular: De cer...')
+#2 C:\laragon\www\apirest-dinamica\routes\services\get.php(14): GetController::getDataFilter('courses', 'id_course,title...', 'title_course,id...', 'Angular: De cer...')
+#3 C:\laragon\www\apirest-dinamica\routes\routes.php(31): include('C:\\laragon\\www\\...')
+#4 C:\laragon\www\apirest-dinamica\controllers\routes.controller.php(9): include('C:\\laragon\\www\\...')
+#5 C:\laragon\www\apirest-dinamica\index.php(16): RoutesController->index()
+#6 {main}
+  thrown in C:\laragon\www\apirest-dinamica\models\get.model.php on line 44
+[24-Jul-2025 16:31:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\laragon\www\apirest-dinamica\models\get.model.php:46
+Stack trace:
+#0 C:\laragon\www\apirest-dinamica\models\get.model.php(46): PDOStatement->execute()
+#1 C:\laragon\www\apirest-dinamica\controllers\get.controller.php(21): GetModel::getDataFilter('courses', 'id_course,title...', 'title_course,id...', 'Angular: De cer...')
+#2 C:\laragon\www\apirest-dinamica\routes\services\get.php(14): GetController::getDataFilter('courses', 'id_course,title...', 'title_course,id...', 'Angular: De cer...')
+#3 C:\laragon\www\apirest-dinamica\routes\routes.php(31): include('C:\\laragon\\www\\...')
+#4 C:\laragon\www\apirest-dinamica\controllers\routes.controller.php(9): include('C:\\laragon\\www\\...')
+#5 C:\laragon\www\apirest-dinamica\index.php(16): RoutesController->index()
+#6 {main}
+  thrown in C:\laragon\www\apirest-dinamica\models\get.model.php on line 46
+[24-Jul-2025 16:32:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\laragon\www\apirest-dinamica\models\get.model.php:46
+Stack trace:
+#0 C:\laragon\www\apirest-dinamica\models\get.model.php(46): PDOStatement->execute()
+#1 C:\laragon\www\apirest-dinamica\controllers\get.controller.php(21): GetModel::getDataFilter('courses', 'id_course,title...', 'title_course,id...', 'Angular: De cer...')
+#2 C:\laragon\www\apirest-dinamica\routes\services\get.php(14): GetController::getDataFilter('courses', 'id_course,title...', 'title_course,id...', 'Angular: De cer...')
+#3 C:\laragon\www\apirest-dinamica\routes\routes.php(31): include('C:\\laragon\\www\\...')
+#4 C:\laragon\www\apirest-dinamica\controllers\routes.controller.php(9): include('C:\\laragon\\www\\...')
+#5 C:\laragon\www\apirest-dinamica\index.php(16): RoutesController->index()
+#6 {main}
+  thrown in C:\laragon\www\apirest-dinamica\models\get.model.php on line 46
+[24-Jul-2025 16:36:38 UTC] PHP Fatal error:  Uncaught Error: Cannot create references to/from string offsets in C:\laragon\www\apirest-dinamica\models\get.model.php:45
+Stack trace:
+#0 C:\laragon\www\apirest-dinamica\controllers\get.controller.php(21): GetModel::getDataFilter('courses', 'id_course,title...', 'title_course,id...', 'Angular: De cer...')
+#1 C:\laragon\www\apirest-dinamica\routes\services\get.php(14): GetController::getDataFilter('courses', 'id_course,title...', 'title_course,id...', 'Angular: De cer...')
+#2 C:\laragon\www\apirest-dinamica\routes\routes.php(31): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\apirest-dinamica\controllers\routes.controller.php(9): include('C:\\laragon\\www\\...')
+#4 C:\laragon\www\apirest-dinamica\index.php(16): RoutesController->index()
+#5 {main}
+  thrown in C:\laragon\www\apirest-dinamica\models\get.model.php on line 45

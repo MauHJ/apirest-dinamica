@@ -19,8 +19,6 @@ class GetController{
     static public function getDataFilter($table, $select, $linkTo, $equalTo){
 
         $response = GetModel::getDataFilter($table, $select, $linkTo, $equalTo);
-        echo '<pre>'; print_r($response); echo '</pre>';
-        return;
         $return = new GetController();
         $return -> fncResponse($response);
 
