@@ -9,9 +9,35 @@ class GetModel{
     ==================================================*/
 
 
-    static public function getData($table, $select){
+    static public function getData($table, $select, $orderBy, $orderMode, $startAt, $endAt){
+        /* ================================================
+            Sin ordenar y limitar datos
+            ==================================================*/
+        $sql = "SELECT $select FROM $table";
 
-        $sql = "SELECT $select FROM `$table`";
+        /* ================================================
+           Ordenar datos sin limites
+        ==================================================*/
+        if($orderBy != null && $orderMode != null && $startAt == null && $endAt == null){
+
+            $sql = "SELECT $select FROM $table ORDER BY $orderBy $orderMode";
+        }
+        /* ================================================
+           Ordenar y limitar datos
+        ==================================================*/
+        if($orderBy != null && $orderMode != null && $startAt != null && $endAt != null){
+
+            $sql = "SELECT $select FROM $table ORDER BY $orderBy $orderMode LIMIT $startAt, $endAt";
+
+        }     
+        /* ================================================
+           Limitar datos sin ordenar
+        ==================================================*/   
+        if($orderBy == null && $orderMode == null && $startAt != null && $endAt != null){
+
+            $sql = "SELECT $select FROM  $table LIMIT $startAt, $endAt";
+
+        }        
         $stmt = Connection::connect()->prepare($sql);
         $stmt -> execute();
         return $stmt -> fetchAll(PDO::FETCH_CLASS);
@@ -22,7 +48,7 @@ class GetModel{
     ==================================================*/
 
 
-    static public function getDataFilter($table, $select, $linkTo, $equalTo){
+    static public function getDataFilter($table, $select, $linkTo, $equalTo, $orderBy, $orderMode, $startAt, $endAt){
         
         
         $linkToArray = explode(",",$linkTo);     
@@ -38,8 +64,36 @@ class GetModel{
                     }
                 }
             }
-
+        /* ================================================
+        Sin ordenar y limitar datos
+        ==================================================*/
         $sql = "SELECT $select FROM $table WHERE $linkToArray[0] = :$linkToArray[0] $linkToText";
+        /* ================================================
+           Ordenar datos sin limites
+        ==================================================*/
+        if($orderBy != null && $orderMode != null && $startAt == null && $endAt == null){
+
+            $sql = "SELECT $select FROM $table WHERE $linkToArray[0] = :$linkToArray[0] $linkToText ORDER BY $orderBy $orderMode";
+
+        }      
+        /* ================================================
+           Ordenar y limitar datos
+        ==================================================*/
+        if($orderBy != null && $orderMode != null && $startAt != null && $endAt != null){
+
+            $sql = "SELECT $select FROM $table WHERE $linkToArray[0] = :$linkToArray[0] $linkToText ORDER BY $orderBy $orderMode LIMIT $startAt, $endAt";
+
+        }     
+        /* ================================================
+           Limitar datos sin ordenar
+        ==================================================*/   
+        if($orderBy == null && $orderMode == null && $startAt != null && $endAt != null){
+
+            $sql = "SELECT $select FROM $table WHERE $linkToArray[0] = :$linkToArray[0] $linkToText LIMIT $startAt, $endAt";
+
+        }                 
+
+
         $stmt = Connection::connect()->prepare($sql);
             foreach($linkToArray as $key => $value){
 
